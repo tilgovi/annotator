@@ -876,3 +876,11 @@
 .annotator-hl-filtered {
 	background-color: transparent;
 }
+
+.annotator-heatmap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 22px;
+}
