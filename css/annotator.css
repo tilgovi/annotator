@@ -880,7 +880,6 @@
 .annotator-heatmap {
   position: fixed;
   top: 0;
-  right: 0;
-  height: 100%;
-  width: 22px;
+  right: -20px;
+  width: 44px;
 }
