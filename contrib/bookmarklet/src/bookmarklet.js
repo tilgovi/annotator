@@ -174,8 +174,9 @@
 
       jQuery.ajaxSetup({timeout: this.config('timeout', 30000)});
       jQuery.getScript(annotatorSource, callback)
-            .error(function () {
+            .error(function (e) {
               notification.error('Sorry, we\'re unable to load Annotator at the moment...');
+              console.log(e)
             });
     },
 
@@ -198,6 +199,8 @@
       return this.config('annotateItPermissions', {});
     },
 
+    },
+
     setup: function () {
       var annotator = new window.Annotator(options.target || body), namespace;
 
@@ -206,6 +209,7 @@
         .addPlugin('Auth', this.authOptions())
         .addPlugin('Store', this.storeOptions())
         .addPlugin('AnnotateItPermissions', this.annotateItPermissionsOptions());
+        .addPlugin('Heatmap', this.heatmapOptions())
 
       if (this.config('tags') === true) {
           annotator.addPlugin('Tags');

@@ -30,6 +30,7 @@ PLUGINS = [ 'tags'
           , 'unsupported'
           , 'permissions'
           , 'annotateitpermissions'
+          , 'heatmap'
           ]
 
 BOOKMARKLET_PATH = 'contrib/bookmarklet'
