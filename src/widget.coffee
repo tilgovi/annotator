@@ -23,6 +23,20 @@ class Annotator.Widget extends Delegator
     super
     @classes = $.extend {}, Annotator.Widget.prototype.classes, @classes
 
+  # Public: Checks to see if the Widget is currently displayed.
+  #
+  # Examples
+  #
+  #   widget.show()
+  #   widget.isShown() # => Returns true
+  #
+  #   widget.hide()
+  #   widget.isShown() # => Returns false
+  #
+  # Returns true if the Widget is visible.
+  isShown: ->
+    not @element.hasClass(@classes.hide)
+
   checkOrientation: ->
     this.resetOrientation()
 
