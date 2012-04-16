@@ -883,3 +883,10 @@
   right: -20px;
   width: 44px;
 }
+
+.annotator-heatmap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+}
